@@ -1,0 +1,55 @@
+{
+  "study": "Yomitsugi publication extension: singleton-template population validation",
+  "date": "2026-10-24",
+  "status": "Internal analysis plan fixed before new simulations; not an external preregistration",
+  "original_run": "population_main_a780acedb7dc_27063d8af2b9",
+  "original_reanalysis": {
+    "expected_runs": 200,
+    "primary_window": [501, 1000],
+    "sensitivity_windows": [[251, 1000], [751, 1000]],
+    "interpretation": "Post hoc reanalysis; replicate-level time averages are the units for intervals."
+  },
+  "unlimited": {
+    "sigma": 0.5,
+    "death_conditions": ["0.30", "spectral_threshold", "0.45"],
+    "initial_population": 60,
+    "initial_reader": [0, 0, 1, 1],
+    "template": [0, 0, 1, 1],
+    "horizon": 25,
+    "replicates": 2000,
+    "base_seed": 2026102411,
+    "update": "All parents attempt once; parents and offspring survive independently. Exact aggregate multinomial/binomial law; no resource or population cap.",
+    "outputs": "Unconditional count means, complete trajectories, exact expectation and finite-time extinction probabilities. Extinct replicates retained."
+  },
+  "finite_resource": {
+    "template": [0, 0, 1, 1],
+    "initial_reader": [0, 0, 1, 1],
+    "cases": [
+      {"sigma": 0.5, "scale": 1},
+      {"sigma": 0.5, "scale": 4},
+      {"sigma": 0.4, "scale": 1},
+      {"sigma": 0.6, "scale": 1},
+      {"sigma": 0.8, "scale": 1},
+      {"sigma": 0.8, "scale": 4}
+    ],
+    "replicates": 20,
+    "sweeps": 1000,
+    "death": 0.2,
+    "initial_population_per_scale": 60,
+    "initial_resource_per_scale": 60,
+    "resource_capacity_per_scale": 120,
+    "resource_supply_per_scale": 30,
+    "base_seed": 2026102413,
+    "primary_window": [501, 1000],
+    "sensitivity_windows": [[251, 1000], [751, 1000]],
+    "update": "Unmodified vendored original snapshot sweep and kernel; one fixed template; independent seeds by case and replicate.",
+    "extinction_handling": "Retain every replicate. Report zero-filled fractions after extinction, conditional-on-occupied fractions, and occupied fractions separately.",
+    "interpretation": "The dominant eigenvector is a mean-field composition candidate, not an exact finite-population stationary law."
+  },
+  "statistics": {
+    "interval": "Student-t 95% intervals over independent replicate means; Wilson 95% intervals for binary outcomes",
+    "no_pseudoreplication": true,
+    "no_outcome_adaptive_selection": true,
+    "no_parameter_fitting": true
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "created_utc": "2026-10-24T09:21:54.397710+00:00",
+  "status": "internal prospective numerical plan; not public preregistration",
+  "reason": "Inherited-reader mechanism, exact resource stopping, controlled density limit, and matched restoration experiment in response to self-review.",
+  "base_seed": 2026102407,
+  "exact_resource_model": {
+    "classes": [
+      "Z",
+      "C",
+      "A",
+      "P"
+    ],
+    "candidate_births": "independent row-L multinomials including failure",
+    "resource_selection": "uniform without-replacement subset of all candidate successes",
+    "deaths": "independent fixed probability after births",
+    "d": 0.2,
+    "supply": 30,
+    "capacity": 120
+  },
+  "fluid_limit": {
+    "widths": [
+      0.5,
+      0.8
+    ],
+    "scales": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "repeats_per_condition": 200,
+    "horizon": 200,
+    "initial_class_counts": [
+      0,
+      0,
+      0,
+      60
+    ],
+    "initial_resource": 60,
+    "density_scale": "multiply population, initial resource, supply and capacity by scale",
+    "primary": "mean squared Euclidean class-density error at sweep 100",
+    "secondary": [
+      "same error at sweeps25 and200",
+      "whole trajectory density and extinction",
+      "mean bias vs fluid map"
+    ],
+    "inference": "one independent trajectory per replicate; fitted slopes descriptive"
+  },
+  "matched_rewiring": {
+    "source": "all 10 existing sigma0.8 scale1 trajectories at first complete two-value-reader loss",
+    "selection_status": "post-hoc checkpoints; prospective new continuation seeds and outcomes",
+    "pairs_per_checkpoint": 10,
+    "rewiring": "0000 + 1111 -> 0001 + 1110, on 10 disjoint pairs",
+    "preserves": [
+      "population",
+      "resource",
+      "each key slot",
+      "global symbols at each position",
+      "each actor success probability",
+      "initial reference count zero",
+      "initial decoding information zero"
+    ],
+    "arms": [
+      "unchanged",
+      "rewired"
+    ],
+    "repeats_per_arm_per_checkpoint": 200,
+    "horizon": 500,
+    "primary": "nonextinction at sweep500 equally weighted over ten fixed checkpoints",
+    "secondary": [
+      "appearance of P by500",
+      "survival curves",
+      "class counts",
+      "time to two-value loss"
+    ],
+    "seeds": "independent checkpoint/arm/replicate",
+    "uncertainty": "Wilson95 per group; fixed-checkpoint difference Hoeffding95 radius sqrt(log(2/.05)/(10*200)); no universal-population inference"
+  },
+  "permutation_structure": {
+    "scope": "zero-width permutation stratum",
+    "alphabet_sizes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "targets": "one canonical per conjugacy class",
+    "actors": "all permutations",
+    "status": "theorem and q<=6 checks informed extension; exact enumeration is not statistical preregistration",
+    "outcomes": [
+      "attractor periods",
+      "native basins",
+      "transposition formula",
+      "standard-commutator identity"
+    ]
+  },
+  "population_thresholds": {
+    "scope": "exact branching PGFs and spectral conditions",
+    "examples": [
+      {
+        "sigma": 0.8,
+        "d": 0.2
+      },
+      {
+        "sigma": 2.0,
+        "d": 0.35
+      }
+    ],
+    "horizon": 200,
+    "status": "model-specific consequence; no generic threshold priority claim"
+  },
+  "gates": [
+    "independent small-state transition enumeration",
+    "fluid/Jacobian checks",
+    "literal permutation checks",
+    "unchanged original tests",
+    "second-round review of integrated draft"
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "sweeps": 1000,
+  "repeats": 20,
+  "initial_population": 60,
+  "S0": 60,
+  "Smax": 120,
+  "J": 30,
+  "d": 0.2,
+  "base_seed": 2026102405,
+  "modes": [
+    "single_a",
+    "single_b",
+    "mixed",
+    "pooled_shared",
+    "pooled_separate"
+  ],
+  "conditions": [
+    {
+      "name": "identity_swap_sigma_0.0",
+      "sigma": 0.0,
+      "chemistry": {
+        "backbone_features": {
+          "0": 0.0
+        },
+        "symbol_features": {
+          "0": 0.0,
+          "1": 1.0
+        },
+        "residue_key_features": {
+          "0": 0.0,
+          "1": 1.0
+        },
+        "residue_backbone_features": {
+          "0": 0.0,
+          "1": 0.0
+        }
+      },
+      "types": [
+        {
+          "name": "identity",
+          "b": 0,
+          "g": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "p": [
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "swap",
+          "b": 0,
+          "g": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "p": [
+            0,
+            1,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "identity_swap_sigma_0.5",
+      "sigma": 0.5,
+      "chemistry": {
+        "backbone_features": {
+          "0": 0.0
+        },
+        "symbol_features": {
+          "0": 0.0,
+          "1": 1.0
+        },
+        "residue_key_features": {
+          "0": 0.0,
+          "1": 1.0
+        },
+        "residue_backbone_features": {
+          "0": 0.0,
+          "1": 0.0
+        }
+      },
+      "types": [
+        {
+          "name": "identity",
+          "b": 0,
+          "g": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "p": [
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "swap",
+          "b": 0,
+          "g": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "p": [
+            0,
+            1,
+            1,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "wall_seconds": 86400,
+  "max_population": 100000,
+  "max_trials": 100000000,
+  "memory_gb": 20,
+  "disk_gb": 5,
+  "birth_log_limit": 2000,
+  "checkpoint_seconds": 240,
+  "sample_every": 1,
+  "parent_copy": false
+}
